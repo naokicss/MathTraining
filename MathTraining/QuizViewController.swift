@@ -21,8 +21,24 @@ class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setQuestions()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func tapped(sender: UIButton){
+        if sender.tag - 1 == answerIndex{
+            correct += 1
+        }
+    
+        questionIndex += 1
+        if questionIndex >= total {
+            performSegue(withIdentifier: "QuizToResult", sender: nil)
+        }else {
+            setQuestions()
+        }
+        
     }
     
 

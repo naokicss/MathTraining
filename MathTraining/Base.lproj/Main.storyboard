@@ -95,6 +95,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedWithSender:" destination="ZQ3-CJ-5gS" eventType="touchUpInside" id="l4i-ha-6p7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2J3-aI-Ydg">
                                 <rect key="frame" x="80" y="626" width="90" height="84"/>
@@ -104,6 +107,9 @@
                                 <state key="normal" title="×">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedWithSender:" destination="ZQ3-CJ-5gS" eventType="touchUpInside" id="L4B-7W-GEH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E60-6m-dST">
                                 <rect key="frame" x="225" y="494" width="90" height="84"/>
@@ -113,6 +119,9 @@
                                 <state key="normal" title="−">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedWithSender:" destination="ZQ3-CJ-5gS" eventType="touchUpInside" id="DQD-BY-mbu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpK-Cc-Ngu">
                                 <rect key="frame" x="225" y="625" width="90" height="84"/>
@@ -122,13 +131,19 @@
                                 <state key="normal" title="÷">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedWithSender:" destination="ZQ3-CJ-5gS" eventType="touchUpInside" id="xmQ-Xy-N4i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="27I-Cu-oWD"/>
                     </view>
                     <connections>
-                        <segue destination="A6Z-Tv-4Ni" kind="presentation" modalPresentationStyle="fullScreen" id="1Vw-Ut-0gx"/>
+                        <outlet property="centerNumberLabel" destination="FYh-lq-w9c" id="3e2-1D-EGD"/>
+                        <outlet property="leftNumberLabel" destination="NvF-E7-QPM" id="tAL-yG-bcz"/>
+                        <outlet property="rightNumberLabel" destination="pD2-SC-41F" id="gNi-eN-E4b"/>
+                        <segue destination="A6Z-Tv-4Ni" kind="presentation" identifier="QuizToResult" modalPresentationStyle="fullScreen" id="1Vw-Ut-0gx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PA-gp-ohL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
