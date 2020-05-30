@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="857.97101449275374" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="w8O-G8-N13">
             <objects>
-                <viewController id="A6Z-Tv-4Ni" sceneMemberID="viewController">
+                <viewController id="A6Z-Tv-4Ni" customClass="ResultViewController" customModule="MathTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Zj-Au-wzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +180,9 @@
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eLC-jn-GZ0" kind="unwind" unwindAction="backTOTitleWithSender:" id="5Ur-P0-DKj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU ARE GREAT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjG-cC-nYa">
                                 <rect key="frame" x="0.0" y="418" width="414" height="60"/>
@@ -192,8 +195,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ay1-e4-m15"/>
                     </view>
+                    <connections>
+                        <outlet property="messagetLabel" destination="tjG-cC-nYa" id="beL-Y9-xAA"/>
+                        <outlet property="resultLabel" destination="lTL-uu-3se" id="2ky-gr-NqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwP-Pv-Xim" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="eLC-jn-GZ0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1544.9275362318842" y="126.5625"/>
         </scene>
